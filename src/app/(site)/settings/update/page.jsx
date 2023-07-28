@@ -55,8 +55,8 @@ export default function Change() {
                 <div className="mb-12">
                     <h2 className="font-bold mb-4 text-4xl">Change Password</h2>
                     <p>
-                        Update your password for added security. Confirm changes by entering
-                        your current password.
+                        Update your password in this section. Confirm changes by entering
+                        your previous password.
                     </p>
                 </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
@@ -16,6 +17,7 @@ export default function Search() {
     const [pages, setPages] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
 
+    const router = useRouter();
     const { data: session } = useSession();
 
     const handleGetPosts = async () => {
@@ -35,7 +37,9 @@ export default function Search() {
     useEffect(() => {
         if (session) {
             handleGetPosts();
-        }
+        } else if (session === null) {
+                router.push("/login");
+            }
     }, [session]);
 
     useEffect(() => {
