@@ -1,12 +1,14 @@
-# Introduction
+# IntelliBlog
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/86b23c47-4dd9-48e3-9f35-e81e1a37908c" height="100">
 
+## Introduction
+
 IntelliBlog is an innovative platform that generates captivating blog posts using cutting-edge AI technology. With IntelliBlog, you can effortlessly create engaging content from YouTube URLs, uploaded media, and user prompts. The application provides a centralized platform for managing all your generated blog posts conveniently.
 
-## Technology Stack
+### Technology Stack
 
-IntelliBlog is built using the following technologies:
+IntelliBlog was built with the following:
 
   - **Frontend:** React with Tailwind CSS
   - **Backend:** Next.js
@@ -15,7 +17,6 @@ IntelliBlog is built using the following technologies:
 
 # Table of Contents
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Setting Up Environment Variables](#setting-up-environment-variables)
   - [MongoDB](#mongodb)
@@ -27,19 +28,18 @@ IntelliBlog is built using the following technologies:
 - [Quick Start](#quick-start)
 - [Screenshots](#screenshots)
 - [Conclusion](#conclusion)
+  - [License](#license)
 
 # Getting Started
 
 Before you dive into IntelliBlog, make sure you have the following prerequisites in place:
-
-### Prerequisites
 
 - [Node.js](https://nodejs.org/en)
 - [npm](https://www.npmjs.com/)
 
 ## Installation
 
-Set up IntelliBlog with ease using the provided instructions:
+Set up IntelliBlog using the provided instructions:
 
 1. Clone the repository:
 
@@ -59,11 +59,11 @@ cd IntelliBlog
 npm install
 ```
 
-Installation is complete!
+Installation is complete! You can proceed to follow the "Setting up Enviornment Variables" section to set up the necessary configurations.
 
 # Setting Up Environment Variables
 
-In this section, we will highlight how to configure the required environment variables. Create a `.env` file in the main directory, and copy the following skeleton code:
+In this section, we will highlight how to configure the required environment variables. First, create a `.env` file in the root directory, and copy the following skeleton code:
 
 ```
 DATABASE_URL=
@@ -152,10 +152,10 @@ To enable user login through [GitHub](https://github.com/) as a provider in [Nex
 
 **4. Fill Out the Application Details:** You will be prompted to fill out the following:
 
-  - Application Name: Feel free to name this whatever you want.
-  - Homepage URL: Enter the following URL: `http://localhost:3000`.
-  - Application Description: You can leave this section blank.
-  - Authorization callback URL:  Enter the following URL: `http://localhost:3000`.
+  - ***Application Name:*** Feel free to name this whatever you want.
+  - ***Homepage URL:*** Enter the following URL: `http://localhost:3000`.
+  - ***Application Description:*** You can leave this section blank.
+  - ***Authorization callback URL:*** Enter the following URL: `http://localhost:3000`.
 
 **5. Register the Application:** After filling out the details, click the "Register application" button.
 
@@ -184,10 +184,10 @@ To enable user login through Google as a provider in NextAuth.js, you will need 
 
 **4. Fill Out the Application Details:** You will be prompted to fill out the following:
 
-  - Application Name: Feel free to name this whatever you want.
-  - User Support Email: Enter your Google Gmail address.
-  - Application Home Page: Enter the following URL: `http://localhost:3000`.
-  - Developer Contact Information: Enter your Google Gmail address.
+  - ***Application Name:*** Feel free to name this whatever you want.
+  - ***User Support Email:*** Enter your Google Gmail address.
+  - ***Application Home Page:*** Enter the following URL: `http://localhost:3000`.
+  - ***Developer Contact Information:*** Enter your Google Gmail address.
 
 Feel free to leave the additional optional fields blank. Continue to click "Save and Continue" until you reach the "Summary" section.
 
@@ -226,11 +226,11 @@ OPENAI_API_KEY=your_openai_key
 
 Replace `your_openai_key` with the OpenAI key you just generated.
 
-By following these steps, you now possess an OpenAI API key, unlocking the potential to infuse your blog posts with engaging and AI-generated content. 
+Now you will be able to successfully infuse your blog posts with engaging and AI-generated content. 
 
 ## Stability AI
 
-To enhance your blog posts with AI-generated images using [Stability AI](https://stability.ai/), you'll need to obtain an API key. This key will grant your application access to Stability AI's image generation capabilities, enabling you to create captivating and visually appealing images for your blog content.
+To enhance your blog posts with AI-generated images using [Stability AI](https://stability.ai/), you will need to obtain an API key. This key will grant your application access to Stability AI's image generation capabilities, enabling you to create captivating and visually appealing images for your blog content.
 
 **1. Sign Up for a Stability AI Account:** If you do not have an account, visit the [Stability AI](https://stability.ai/) website and sign up for an account. As part of the account creation process, Stability AI will assign a default API key to your account.
 
@@ -241,20 +241,22 @@ To enhance your blog posts with AI-generated images using [Stability AI](https:/
 ```
 STABILITY_API_KEY=your_stability_key
 ```
-API
+
 Replace `your_stability_key` with the Stability AI key you just generated.
 
-By following these steps, you now have a Stability AI API key, unlocking the power of AI image generation for your blog content. 
+By following these steps, you have unlocked the power of AI image generation for your blog content. 
 
 # Quick Start
 
-First run the development server:
+Now that you have set up the necessary configurations, getting started is easy.
+
+First, run the development server:
 
 ```
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now, open [http://localhost:3000](http://localhost:3000) with your browser to see the website content.
 
 # Screenshots
 
@@ -266,37 +268,37 @@ Here are some selected application snapshots displaying IntelliBlog's user-frien
 
 **Home:** Learn about IntelliBlog and explore its exciting features on our welcoming homepage.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/08dfc730-0124-4c2a-9efa-6e786a9bdf9e" height="325">
 
 **Browse Blog Posts:** Explore diverse AI-generated blog posts covering engaging topics.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/95484b47-4275-4be2-aeac-7ab2813b99ae" height="325">
 
 **Search:** Effortlessly find relevant blog posts by entering keywords.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/15d8ee52-1afa-4830-b4af-103537fc6d20" height="325">
 
 **Generate from Youtube URL's:** Turn YouTube URLs into captivating blog posts using AI.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/0d56420d-ac8e-4000-837d-31e477276e7d" height="325">
 
 **Generate from Uploaded Media:** Generate compelling blog posts from uploaded media files with AI.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/d5475c5b-828f-4de6-bc31-069994ddc4e8" height="325">
 
 **Generate from Prompts:** Fuel your creativity with AI-generated blog posts from custom prompts.
 
-<hr/>
+---
 
 ### Settings
 
@@ -304,25 +306,25 @@ Here are some selected application snapshots displaying IntelliBlog's user-frien
 
 **Update Account:** Easily modify your first name, last name, and user profile image to keep your account up-to-date and personalized.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/8567cdaf-9cf4-4e04-8549-e7b9186300dd" height="325">
 
 **Notification Preferences:** Select your preferred notification types and frequency.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/d471cda8-24c1-4dfe-89e9-acd654e25e88" height="325">
 
 **Change Password:** Enhance your account's security by effortlessly updating your password whenever needed.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/ea8f501d-e6f0-41d3-93df-5360fa472741" height="325">
 
 **Delete Account:** If necessary, securely delete your account to ensure the removal of all associated data and personal information.
 
-<hr/>
+---
 
 ### Login Pages
 
@@ -330,13 +332,13 @@ Here are some selected application snapshots displaying IntelliBlog's user-frien
 
 **Login:** Access your IntelliBlog account securely with your registered credentials.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/13021d7e-c830-4408-87d3-0c366cd469d3" height="325">
 
 **Register:** Choose from email, GitHub, or Google to create your IntelliBlog account.
 
-<hr/>
+---
 
 ### Supplementary Pages
 
@@ -344,19 +346,19 @@ Here are some selected application snapshots displaying IntelliBlog's user-frien
 
 **About:** Get to know who is behind IntelliBlog,
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/2881bf65-a213-4062-ba19-facbc4553070" height="325">
 
 **Contact Us:** Reach out for any inquiries, feedback, or assistance. 
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/4f667d9f-569a-4e87-bafa-55f588b941c0" height="325">
 
 **FAQ:** Find quick answers to common questions about IntelliBlog's functionality, usage, and more.
 
-<hr/>
+---
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/fc440f8e-d455-4269-9fd5-7c10816bb22d" height="325">
 
@@ -364,4 +366,8 @@ Here are some selected application snapshots displaying IntelliBlog's user-frien
 
 # Conclusion
 
-Congratulations! You've successfully set up IntelliBlog! If you encounter any issues or have questions, please feel free to reach out for support.
+Congratulations! You have now successfully set up IntelliBlog. If you encounter any issues or have questions, please feel free to reach out for support.
+
+## License 
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as you see fit. See the [LICENSE](LICENSE) file for more details.
