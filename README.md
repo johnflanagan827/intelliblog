@@ -1,56 +1,47 @@
-# Introduction
+# IntelliBlog
 
 <img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/86b23c47-4dd9-48e3-9f35-e81e1a37908c" height="100">
 
-IntelliBlog is an innovative platform that generates captivating blog posts using cutting-edge AI technology. With IntelliBlog, you can effortlessly create engaging content from YouTube URLs, uploaded media, and user prompts. The application provides a centralized platform for managing all your generated blog posts conveniently.
+# Introduction
+
+IntelliBlog is an advanced platform that uses cutting-edge AI technology to generate captivating blog posts. It supports user authentication and allows you to create engaging content effortlessly from YouTube URLs, uploaded media, and user prompts. Manage all your generated blog posts conveniently on this centralized application.
+
+## Demo
+
+Here is a brief demo showcasing IntelliBlog's ability to generate a blog post from user prompts: 
+
+https://github.com/johnflanagan827/IntelliBlog/assets/69359897/714c6cdb-d15d-4e66-9b8c-0305262c1e8e
 
 ## Technology Stack
 
-IntelliBlog is built using the following technologies:
+IntelliBlog was built with the following:
 
   - **Frontend:** React with Tailwind CSS
   - **Backend:** Next.js
   - **Database:** MongoDB
   - **User Authentication:** NextAuth.js
 
-# Table of Contents
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Setting Up Environment Variables](#setting-up-environment-variables)
-  - [MongoDB](#mongodb)
-  - [NextAuth](#nextauthjs)
-  - [Github](#github)
-  - [Google](#google)
-  - [OpenAI](#openai)
-  - [Stability AI](#stability-ai)
-- [Quick Start](#quick-start)
-- [Screenshots](#screenshots)
-- [Conclusion](#conclusion)
-
 # Getting Started
 
 Before you dive into IntelliBlog, make sure you have the following prerequisites in place:
-
-### Prerequisites
 
 - [Node.js](https://nodejs.org/en)
 - [npm](https://www.npmjs.com/)
 
 ## Installation
 
-Set up IntelliBlog with ease using the provided instructions:
+Set up IntelliBlog using the provided instructions:
 
 1. Clone the repository:
 
 ```
-git clone https://github.com/johnflanagan827/IntelliBlog.git```
+git clone https://github.com/johnflanagan827/intelliblog.git
 ```
 
 2. Change into the project directory:
 
 ```
-cd IntelliBlog
+cd intelliblog
 ```
 
 3. Install dependencies:
@@ -59,11 +50,11 @@ cd IntelliBlog
 npm install
 ```
 
-Installation is complete!
+Installation is complete! You can proceed to follow the [Setting up Enviornment Variables](#setting-up-environment-variables) section to set up the necessary configurations.
 
 # Setting Up Environment Variables
 
-In this section, we will highlight how to configure the required environment variables. Create a `.env` file in the main directory, and copy the following skeleton code:
+In this section, we will highlight how to configure the required environment variables. First, create a `.env` file in the root directory, and copy the following skeleton code:
 
 ```
 DATABASE_URL=
@@ -99,12 +90,10 @@ openssl rand -base64 32
 **3. Update `.env` File:** In your project's root directory, update the `.env` file as follows:
 
 ```
-SECRET=your_secret
+SECRET=YOUR_SECRET
 ```
 
-Replace `your_secret` with the secret value you just generated.
-
-By following these steps, you have successfully generated and applied a strong NextAuth secret to your project. This will enhance the security and privacy of your authentication and token-related operations.
+Replace `YOUR_SECRET` with the secret value you just generated.
 
 ## MongoDB
 
@@ -133,12 +122,10 @@ mongodb+srv://username:password@clustername.mongodb.net/test
 **9. Update `.env` File:** In your project's root directory, update the `.env` file as follows:
 
 ```
-DATABASE_URL=your_mongodb_uri
+DATABASE_URL=YOUR_MONGODB_URI
 ```
 
-Replace `your_mongodb_uri` with the connection URI you obtained from MongoDB.
-
-With the MongoDB connection URI properly set up, your application can now connect to the MongoDB database.
+Replace `YOUR_MONGODB_URI` with the connection URI you obtained from MongoDB.
 
 ## GitHub
 
@@ -152,10 +139,10 @@ To enable user login through [GitHub](https://github.com/) as a provider in [Nex
 
 **4. Fill Out the Application Details:** You will be prompted to fill out the following:
 
-  - Application Name: Feel free to name this whatever you want.
-  - Homepage URL: Enter the following URL: `http://localhost:3000`.
-  - Application Description: You can leave this section blank.
-  - Authorization callback URL:  Enter the following URL: `http://localhost:3000`.
+  - ***Application Name:*** Feel free to name this whatever you want.
+  - ***Homepage URL:*** Enter the following URL: `http://localhost:3000`.
+  - ***Application Description:*** You can leave this section blank.
+  - ***Authorization callback URL:*** Enter the following URL: `http://localhost:3000`.
 
 **5. Register the Application:** After filling out the details, click the "Register application" button.
 
@@ -164,13 +151,11 @@ To enable user login through [GitHub](https://github.com/) as a provider in [Nex
 **7. Update `.env` file:** In your project's root directory, update the `.env` file as follows:
 
 ```
-GITHUB_ID=your_github_id
-GITHUB_SECRET=your_github_secret
+GITHUB_ID=YOUR_GITHUB_ID
+GITHUB_SECRET=YOUR_GITHUB_SECRET
 ```
 
-Replace `your_github_id` and `your_github_secret` with the Github Client ID and Secret you just generated.
-
-You have now successfully integrated GitHub as a provider for user authentication in NextAuth.js. Users can now log in to your application using their GitHub accounts.
+Replace `YOUR_GITHUB_ID` and `YOUR_GITHUB_SECRET` with the Github Client ID and Secret you just generated.
  
 ## Google
 
@@ -184,10 +169,10 @@ To enable user login through Google as a provider in NextAuth.js, you will need 
 
 **4. Fill Out the Application Details:** You will be prompted to fill out the following:
 
-  - Application Name: Feel free to name this whatever you want.
-  - User Support Email: Enter your Google Gmail address.
-  - Application Home Page: Enter the following URL: `http://localhost:3000`.
-  - Developer Contact Information: Enter your Google Gmail address.
+  - ***Application Name:*** Feel free to name this whatever you want.
+  - ***User Support Email:*** Enter your Google Gmail address.
+  - ***Application Home Page:*** Enter the following URL: `http://localhost:3000`.
+  - ***Developer Contact Information:*** Enter your Google Gmail address.
 
 Feel free to leave the additional optional fields blank. Continue to click "Save and Continue" until you reach the "Summary" section.
 
@@ -200,13 +185,11 @@ Feel free to leave the additional optional fields blank. Continue to click "Save
 **8. Update `.env` file:** In your project's root directory, update the `.env` file as follows:
 
 ```
-GOOGLE_ID=your_google_id
-GOOGLE_SECRET=your_google_secret
+GOOGLE_ID=YOUR_GOOGLE_ID
+GOOGLE_SECRET=YOUR_GOOGLE_SECRET
 ```
 
-Replace `your_google_id` and `your_google_secret` with the Google Client ID and Secret you just generated.
-
-By following these steps, you have successfully generated Google Client ID and Secret and integrated Google as a provider for user authentication in NextAuth.js. Users can now log in to your application using their Google accounts.
+Replace `YOUR_GOOGLE_ID` and `YOUR_GOOGLE_SECRET` with the Google Client ID and Secret you just generated.
 
 ## OpenAI
 
@@ -221,16 +204,14 @@ To access the OpenAI API and utilize its powerful language models in your applic
 **4. Update `.env` file:** In your project's root directory, update the `.env` file as follows:
 
 ```
-OPENAI_API_KEY=your_openai_key
+OPENAI_API_KEY=YOUR_OPENAI_KEY
 ```
 
-Replace `your_openai_key` with the OpenAI key you just generated.
-
-By following these steps, you now possess an OpenAI API key, unlocking the potential to infuse your blog posts with engaging and AI-generated content. 
+Replace `YOUR_OPENAI_KEY` with the OpenAI key you just generated.
 
 ## Stability AI
 
-To enhance your blog posts with AI-generated images using [Stability AI](https://stability.ai/), you'll need to obtain an API key. This key will grant your application access to Stability AI's image generation capabilities, enabling you to create captivating and visually appealing images for your blog content.
+To enhance your blog posts with AI-generated images using [Stability AI](https://stability.ai/), you will need to obtain an API key. This key will grant your application access to Stability AI's image generation capabilities, enabling you to create captivating and visually appealing images for your blog content.
 
 **1. Sign Up for a Stability AI Account:** If you do not have an account, visit the [Stability AI](https://stability.ai/) website and sign up for an account. As part of the account creation process, Stability AI will assign a default API key to your account.
 
@@ -239,129 +220,25 @@ To enhance your blog posts with AI-generated images using [Stability AI](https:/
 **3. Update `.env` file:** In your project's root directory, update the `.env` file as follows:
 
 ```
-STABILITY_API_KEY=your_stability_key
+STABILITY_API_KEY=YOUR_STABILITY_KEY
 ```
-API
-Replace `your_stability_key` with the Stability AI key you just generated.
 
-By following these steps, you now have a Stability AI API key, unlocking the power of AI image generation for your blog content. 
+Replace `YOUR_STABILITY_KEY` with the Stability AI key you just generated.
 
 # Quick Start
 
-First run the development server:
+Now that you have set up the necessary configurations, getting started is easy.
+
+First, run the development server:
 
 ```
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now, open [localhost:3000](localhost:3000) with your browser to see the website content. 
 
-# Screenshots
+Congratulations! You have now successfully set up IntelliBlog. If you encounter any issues or have questions, please feel free to reach out for support.
 
-Here are some selected application snapshots displaying IntelliBlog's user-friendly interface and AI-powered features.
+# License
 
-### Core Website Features
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/12ddfd14-81ee-4890-a0ad-9fd21814df5e" height="325">
-
-**Home:** Learn about IntelliBlog and explore its exciting features on our welcoming homepage.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/08dfc730-0124-4c2a-9efa-6e786a9bdf9e" height="325">
-
-**Browse Blog Posts:** Explore diverse AI-generated blog posts covering engaging topics.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/95484b47-4275-4be2-aeac-7ab2813b99ae" height="325">
-
-**Search:** Effortlessly find relevant blog posts by entering keywords.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/15d8ee52-1afa-4830-b4af-103537fc6d20" height="325">
-
-**Generate from Youtube URL's:** Turn YouTube URLs into captivating blog posts using AI.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/0d56420d-ac8e-4000-837d-31e477276e7d" height="325">
-
-**Generate from Uploaded Media:** Generate compelling blog posts from uploaded media files with AI.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/d5475c5b-828f-4de6-bc31-069994ddc4e8" height="325">
-
-**Generate from Prompts:** Fuel your creativity with AI-generated blog posts from custom prompts.
-
-<hr/>
-
-### Settings
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/efe74021-0bee-4c44-b251-e47d6df5702f" height="325">
-
-**Update Account:** Easily modify your first name, last name, and user profile image to keep your account up-to-date and personalized.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/8567cdaf-9cf4-4e04-8549-e7b9186300dd" height="325">
-
-**Notification Preferences:** Select your preferred notification types and frequency.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/d471cda8-24c1-4dfe-89e9-acd654e25e88" height="325">
-
-**Change Password:** Enhance your account's security by effortlessly updating your password whenever needed.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/ea8f501d-e6f0-41d3-93df-5360fa472741" height="325">
-
-**Delete Account:** If necessary, securely delete your account to ensure the removal of all associated data and personal information.
-
-<hr/>
-
-### Login Pages
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/a481cf45-42f2-48ca-8415-ffa58882e520" height="325">
-
-**Login:** Access your IntelliBlog account securely with your registered credentials.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/13021d7e-c830-4408-87d3-0c366cd469d3" height="325">
-
-**Register:** Choose from email, GitHub, or Google to create your IntelliBlog account.
-
-<hr/>
-
-### Supplementary Pages
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/3636602d-e78b-4231-9a50-1319a8e618c4" height="325">
-
-**About:** Get to know who is behind IntelliBlog,
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/2881bf65-a213-4062-ba19-facbc4553070" height="325">
-
-**Contact Us:** Reach out for any inquiries, feedback, or assistance. 
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/4f667d9f-569a-4e87-bafa-55f588b941c0" height="325">
-
-**FAQ:** Find quick answers to common questions about IntelliBlog's functionality, usage, and more.
-
-<hr/>
-
-<img src="https://github.com/johnflanagan827/IntelliBlog/assets/69359897/fc440f8e-d455-4269-9fd5-7c10816bb22d" height="325">
-
-**Privacy Policy:** Understand how we handle your data and maintain your privacy and security on IntelliBlog. 
-
-# Conclusion
-
-Congratulations! You've successfully set up IntelliBlog! If you encounter any issues or have questions, please feel free to reach out for support.
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as you see fit. See the [LICENSE](LICENSE) file for more details.
