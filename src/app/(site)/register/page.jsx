@@ -31,9 +31,12 @@ export default function Register() {
 
     const result = await res.json();
 
-    if (res.status === "200") {
+    console.log(result);
+    
+    if (res.ok) {
       toast.success(result.body);
-      router.push("/dashboard/login");
+      await signIn("credentials", { email: data.email.toLocaleLowerCase(), password: data.password, redirect: false });
+      router.push("/dashboard/browse");
     } else {
       if (result.error) {
         toast.error(result.error);

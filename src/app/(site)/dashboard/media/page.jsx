@@ -52,28 +52,28 @@ export default function Media() {
     }
   };
   const getVideoDuration = (file) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onload = () => {
-      const media = new Audio(reader.result);
-      media.onloadedmetadata = () => resolve(media.duration);
-    };
-    reader.readAsDataURL(file);
-    reader.onerror = (error) => reject(error);
-  });
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const media = new Audio(reader.result);
+        media.onloadedmetadata = () => resolve(media.duration);
+      };
+      reader.readAsDataURL(file);
+      reader.onerror = (error) => reject(error);
+    });
 
 
 
   useEffect(() => {
     if (session === null) {
-        router.push("/login");
+      router.push("/login");
     }
-}, [session]);
+  }, [session]);
 
   const renderYoutube = () => {
     return (
       <>
-        
+
         <div className="flex justify-center items-center gap-5 mt-4 mb-8">
           <img
             className="w-40 h-auto"
@@ -136,15 +136,14 @@ export default function Media() {
             <br />
             <p className="font-bold text-xl text-center h-12">Constraints</p>
             <br />
-            <p>
+            <p className="mb-2">
               To ensure quality blog posts, please adhere to these constraints:
             </p>
-            <br />
-            <p>
-              <b>Duration Limit:</b> Videos must be under 15 minutes.
+            <p className="mb-2">
+              <span className="font-bold">Duration Limit:</span> Videos must be under 15 minutes.
             </p>
             <p>
-              <b>Word Requirement:</b> Videos should have at least 200 words of
+              <span className="font-bold">Word Requirement:</span> Videos should have at least 200 words of
               spoken content or subtitles.
             </p>
           </div>
@@ -211,13 +210,12 @@ export default function Media() {
           </label>
           <div className="flex justify-center w-full mt-6">
             <div
-              className={`${
-                file ? "block" : "hidden"
-              } flex justify-center max-w-md gap-8`}
+              className={`${file ? "block" : "hidden"
+                } flex justify-center max-w-md gap-8`}
             >
               <div className="flex gap-2">
                 {(validFileExtensions.includes(file?.name.slice(-3)) ||
-                validFileExtensions.includes(file?.name.slice(-4))) && file?.size < 50000000 && getVideoDuration(file).then(duration => duration < 900) ? (
+                  validFileExtensions.includes(file?.name.slice(-4))) && file?.size < 50000000 && getVideoDuration(file).then(duration => duration < 900) ? (
                   <BsCheckCircle className="text-5xl text-green-500 self-center mr-4" />
                 ) : (
                   <BsXCircle className="text-5xl text-red-600 self-center mr-4" />
@@ -270,14 +268,14 @@ export default function Media() {
               To ensure quality blog posts, please adhere to these constraints:
             </p>
             <p className="mb-2">
-              <b>Duration Limit:</b> Videos must be under 15 minutes.
+              <span className="font-bold">Duration Limit:</span> Videos must be under 15 minutes.
             </p>
             <p className="mb-2">
-              <b>Word Requirement:</b> Videos should have at least 200 words of
+              <span className="font-bold">Word Requirement:</span> Videos should have at least 200 words of
               spoken content or subtitles.
             </p>
             <p>
-              <b>Size Requirement:</b> Videos should be less than 50MB in size
+              <span className="font-bold">Size Requirement:</span> Videos should be less than 50MB in size
             </p>
           </div>
           <div className="shadow-2xl flex flex-col p-5 md:max-w-md">
@@ -330,46 +328,44 @@ export default function Media() {
   };
 
   if (session) {
-  return (
-    <div className="margin flex flex-col justify-center">
-      <h1 className="text-4xl font-bold my-4">Media-Based Generation</h1>
-      <p>
-        Our media-based generation section allows you to generate captivating
-        blog content in two ways: by pasting a YouTube video URL or uploading a
-        valid media file. Our AI algorithms process the media, extracting
-        valuable information and creating a compelling blog post. Experience the
-        seamless transformation of your media into engaging blog posts!
-      </p>
-      <div className="flex gap-4 mt-8 mb-4">
-        <button
-          onClick={() => {
-            setActiveBtn("Youtube");
-            setFile(null);
-          }
-          }
-          className={`${
-            activeBtn === "Youtube" ? "bg-gray-200" : "hover:bg-gray-100"
-          } text-gray-800 font-bold py-2 px-4 rounded-lg`}
-        >
-          Youtube
-        </button>
-        <button
-          onClick={() => setActiveBtn("File Upload")}
-          className={`${
-            activeBtn === "File Upload" ? "bg-gray-200" : "hover:bg-gray-100"
-          } text-gray-800 font-bold py-2 px-4 rounded-lg`}
-        >
-          File Upload
-        </button>
+    return (
+      <div className="margin flex flex-col justify-center">
+        <h1 className="text-4xl font-bold my-4">Media-Based Generation</h1>
+        <p>
+          Our media-based generation section allows you to generate captivating
+          blog content in two ways: by pasting a YouTube video URL or uploading a
+          valid media file. Our AI algorithms process the media, extracting
+          valuable information and creating a compelling blog post. Experience the
+          seamless transformation of your media into engaging blog posts!
+        </p>
+        <div className="flex gap-4 mt-8 mb-4">
+          <button
+            onClick={() => {
+              setActiveBtn("Youtube");
+              setFile(null);
+            }
+            }
+            className={`${activeBtn === "Youtube" ? "bg-gray-200" : "hover:bg-gray-100"
+              } text-gray-800 font-bold py-2 px-4 rounded-lg`}
+          >
+            Youtube
+          </button>
+          <button
+            onClick={() => setActiveBtn("File Upload")}
+            className={`${activeBtn === "File Upload" ? "bg-gray-200" : "hover:bg-gray-100"
+              } text-gray-800 font-bold py-2 px-4 rounded-lg`}
+          >
+            File Upload
+          </button>
+        </div>
+        {!loading && activeBtn === "Youtube" ? renderYoutube() : null}
+        {!loading && activeBtn === "File Upload" ? renderFileUpload() : null}
+        {loading ? loadingAnimation() : null}
       </div>
-      {!loading && activeBtn === "Youtube" ? renderYoutube() : null}
-      {!loading && activeBtn === "File Upload" ? renderFileUpload() : null}
-      {loading ? loadingAnimation() : null}
-    </div>
-  );
-        } else {
-          return (
-            <></>
-          );
-        }
+    );
+  } else {
+    return (
+      <></>
+    );
+  }
 }

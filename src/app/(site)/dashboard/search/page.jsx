@@ -318,7 +318,7 @@ export default function Search() {
                         return (
                             <div className="col-span-2 overflow-hidden" key={key}>
                                 <div className="overflow-hidden rounded-3xl">
-                                    <Link href={`/ui/${e.hash}`}>
+                                    <Link href={`/dashboard/${e.hash}`}>
                                         <img
                                             className="rounded-3xl hover:transform hover:scale-110 ease-in-out duration-500 w-full"
                                             src={e.image_url}
@@ -329,7 +329,7 @@ export default function Search() {
                                     <p>{e.subject}</p>
                                     <div className="h-20 overflow-hidden mb-4">
                                         <Link
-                                            href={`/ui/${e.hash}`}
+                                            href={`/dashboard/${e.hash}`}
                                             className="font-bold xl:text-xl text-lg mb-2 hover:underline"
                                         >
                                             {e.title}
